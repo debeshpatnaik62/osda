@@ -1,0 +1,225 @@
+.skillList label {
+    padding: 3px 8px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    margin: 3px;
+    cursor: pointer;
+    float: left;
+    width: calc(100% - 4px);
+    border: 1px solid #e0e0e0;
+}
+.skillList{width: 100%!important;}
+.skillList label input {
+    margin-right: 5px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+.skillpdf-link {
+    margin: 20px -15px;
+    color: #fff;
+    border: 1px solid #a655a7;
+    border-radius: 2px;
+    background: url(../images/download-study-material1.png) center top no-repeat #8e52a3;
+    background-size: cover;
+    opacity: .9;
+}
+
+.skillpdf-link a {
+    display: block;
+    padding: 17px;
+    color: #fff;
+    font-size: 1.7em;
+    text-align: center;}
+
+
+.setReq .required, .skillCompeteForm .col-sm-4 .required {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-weight: 700;
+}
+.custom-control {
+    position: relative;
+    display: inline-block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.red, .required {
+    color: rgba(255, 0, 4, 1);
+}
+
+ .required {
+    color: rgba(255, 0, 4, 1);
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    top: 27px;
+}
+
+.skillcompetepanel{width: 100%}
+
+
+.panel-body{
+    border: 1px solid #d6d6d6;
+    padding: 25px 10px 25px 0px;
+    border-top: 3px solid #cc92c8;
+    border-radius: 10px;
+    }
+
+.skillcompetepanel .panel-heading h3 {
+    margin: 0;
+    background: #DBBF04!important;
+    color: #000;
+}
+
+
+.panel-default {
+    border-color: #fff;
+    box-shadow: none;
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+    padding: 0px 15px;
+}
+
+
+.uploadImg {
+    position: relative;
+}
+.uploadImg input {
+    position: absolute;
+    z-index: 0;
+    left: -1500px;
+}
+
+
+.uploadImg img {
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.captchaimg-sec {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: inset 2px 2px 2px #000;
+    box-shadow: inset 0 0 2px #ccc0;
+    padding: 1px;
+    margin-bottom: 10px;
+    height: 39px;
+}
+
+.captcha_form_padding .captcha_form {
+    padding-right: 0;
+}
+
+
+.captcha_refresh {
+    cursor: pointer;
+    padding: 0 16px;
+    font-size: 25px;
+    border-left: 1px solid #ccc;
+    color: #953988;
+}
+
+label {margin-right: 15px;}
+
+
+
+
+
+.registerlist{}
+
+.listitems{
+    border: 1px solid #fff;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 14px #00000024;
+    margin-right: 20px;
+}
+
+.headers{
+    background: linear-gradient(45deg, #643891 0%,#a03a86 100%);
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.listitems ul li {margin: 0 0 5px 0;}
+
+.fa-calendar{ position: absolute;
+    top: 9px;
+    right: 10px;
+    color: #9c9c9c;}
+
+
+.custom-control {margin-bottom: 8px;}
+
+
+.borderbox{ border: 1px solid #cc92c8;
+    padding: 20px;
+    border-radius: 13px;
+	border-top: 3px solid #cc92c8;}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 490px){
+.form-control {margin-bottom: 10px;}	
+.highlight-text {margin: -0.5em 0 2em 0;}	
+.required {color: rgba(255, 0, 4, 1);position: absolute;right: 0;}	
+.captchaimg-sec {width: 209px;}	
+.captcha_form_padding .captcha_form {padding-right: 0;text-align: center;}	
+.skillpdf-link a {font-size: 1em;}	
+.custom-control {width: 90%;}	
+.skillList {height: 240px;overflow-x: hidden;}	
+.borderbox {padding: 10px 5px;}	
+.form-group { margin-bottom: 0px;}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

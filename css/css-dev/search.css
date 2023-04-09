@@ -1,0 +1,12 @@
+.searchResult{border-bottom: 1px solid #efefef;padding: 10px 5px;}
+.searchResult h4 a{color: #a72ca9;font-size: 21px;}
+.searchResult p{}
+.searchResult .lgrey{color: #949494;font-size: 18px;}
+.page{float: right; display: block;}
+.page-item.active .page-link {background-color: #88398a;border-color: #87398a;}
+.page-link {color: #bf38cc;}
+.page-link:focus {box-shadow: 0 0 0 0.2rem rgba(136, 57, 139, 0.34);}
+.osda--btn {padding: .5em 2em;}
+.searchfilter{border: 1px solid #9c3a86;padding: 30px 20px 10px 20px;text-align: center;border-top: 5px solid #9a3984;margin-bottom: 25px;border-radius: 20px;background: #fff6fd;}
+.searchfilter label{padding-top: 7px;}
+

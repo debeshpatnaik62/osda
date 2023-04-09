@@ -1,0 +1,78 @@
+.year__report{position: relative;margin: 0 0 1em 0;border: 2px solid #66166b;background-color: #c5c5c5;min-height: 200px;}
+.report__media{width: 100%}
+.report__details{position: absolute;top: 0;right: 0;bottom: 0;left: 0;background: linear-gradient(to top, rgb(0, 0, 0) , rgba(0, 0, 0, 0) 75%);}
+.report__content{position: absolute;bottom: 0;width: 100%;padding: 1em;}
+.report__content h3{color: #fff;margin: .1em 0 .7em 0;}
+.report__content span{color: #ff5aec;font-size: 1rem;}
+.report__content a{color: #fff;border: 1px solid;padding: .3em 1em;border-radius: 1px;font-size: .9rem;}
+.report__content a:hover{background-color: #333;border-color: #acacac}
+
+.first-news, .following-news {position: relative;border-bottom: 1px solid #e8e8e8;background-color: #fff;border-radius: 2px;margin: 0 0 1.2em 0;}
+.inNews__media img {width: 100%;border-radius: 3px;}
+.following-news p {margin-bottom: 15px;margin-top: 0;font-size: 18px;line-height: 24px;color: #6f6f6f;font-weight: 500;}
+.date {font-size: .9rem;color: #a31fb1;font-weight: bold;}
+
+/* added by himalaya */
+.news-list {
+    display: flex;
+    align-items: center;
+    position: relative;border-bottom: 1px solid #e8e8e8;background-color: #fff;border-radius: 2px;padding: 1.2em 0;
+}
+.news-list .news-img {width: 250px;}
+.news-list .news-img img {width: 100%;border-radius: 3px;}
+.news-list .title {margin-top: 0;}
+.news-desc {
+    flex: 1;
+}
+
+
+@media screen and (min-width: 1200px){
+.following-news .inNews__media {margin-top: 0;width: 20%;height: 146px;float: left;margin-right: 21px;}
+.following-news .inNews__details {width: 77%;float: left;}	
+	
+	
+}
+
+
+
+
+/*Media*/
+@media screen and (min-width: 430px){
+
+
+}
+
+@media screen and (min-width: 630px){
+.year__report {
+    margin: .5em;
+    width: calc(50% - 18px);
+    display: inline-block;
+}
+.report__content h3 {
+    font-size: 1.5rem;
+}
+
+}
+
+@media screen and (min-width: 768px){
+.report__content h3 {
+    font-size: 1.7rem;
+}
+.report__content span {
+    font-size: 1.2rem;
+}
+
+}
+
+@media screen and (min-width: 1024px){
+.year__report {
+    width: calc(33% - 16px);
+    min-height: 205px;
+}
+
+
+}
+@media screen and (max-width: 480px){
+    .news-list {flex-direction: column;align-items: start;}
+    .news-list .news-img {width: 100%;margin-bottom: 1.2em;}
+}

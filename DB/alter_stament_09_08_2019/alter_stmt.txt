@@ -1,0 +1,203 @@
+CREATE TABLE `error_log` (
+  `INT_ERROR_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `VCH_ERROR_DESC` text,
+  `VCH_TABALE_NAME` text,
+  `VCH_ACTION_CODE` varchar(15) DEFAULT NULL,
+  `VCH_SQL_QUERY` text,
+  `DTM_CREATED_ON` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `STM_UPDATED_ON` datetime DEFAULT NULL,
+  `INT_CREATED_BY` int(10) unsigned DEFAULT '0',
+  `INT_UPDATED_BY` int(10) unsigned DEFAULT '0',
+  PRIMARY KEY (`INT_ERROR_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+
+
+
+CREATE TABLE `t_course_sams_temp` (
+  `intCourseId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `intSamsCourseId` int(10) NOT NULL,
+  `vchSectorId` varchar(8) DEFAULT '0',
+  `vchCourseNameE` varchar(128) NOT NULL,
+  `vchCourseCode` varchar(8) DEFAULT NULL,
+  `vchQualificationId` varchar(8) DEFAULT NULL,
+  `vchQualificationName` varchar(64) DEFAULT NULL,
+  `stmCreatedOn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `intCreatedBy` int(10) unsigned NOT NULL DEFAULT '1',
+  `dtmUpdatedOn` datetime DEFAULT NULL,
+  `bitDeletedFlag` bit(1) NOT NULL DEFAULT b'0',
+  `decDurationHr` decimal(10,1) DEFAULT NULL,
+  `intInstituteType` int(10) DEFAULT NULL,
+  `intDuration` int(10) DEFAULT NULL,
+  PRIMARY KEY (`intCourseId`),
+  KEY `idxCourseNameE` (`vchCourseNameE`),
+  KEY `fk_eligibility_idx` (`vchQualificationName`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+
+
+CREATE TABLE `t_course_tagged` (
+  `intCourseId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `intOSDACourseId` int(10) DEFAULT NULL,
+  `intSAMSITICourseId` int(10) DEFAULT NULL,
+  `intNICCourse` varchar(12) DEFAULT NULL,
+  `intSAMSPOLCourseId` int(10) DEFAULT NULL,
+  `stmCreatedOn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `intCreatedBy` int(10) unsigned NOT NULL DEFAULT '1',
+  `intUpdatedBy` int(10) DEFAULT NULL,
+  `dtmUpdatedOn` datetime DEFAULT NULL,
+  `bitDeletedFlag` bit(1) NOT NULL DEFAULT b'0',
+  PRIMARY KEY (`intCourseId`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+
+CREATE TABLE `t_sams_institute_course_tmp` (
+  `intInstCourseid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `instituteCodeSAMS` int(11) DEFAULT NULL,
+  `intInstituteId` int(10) unsigned DEFAULT NULL,
+  `intCourseIdSAMS` int(10) unsigned NOT NULL,
+  `stmCreatedOn` datetime DEFAULT NULL,
+  `bitDeletedflag` bit(1) NOT NULL DEFAULT b'0',
+  `intCourseId` int(10) unsigned DEFAULT NULL,
+  `intBatchStrength` int(10) DEFAULT '0',
+  `intBatchShiftNo` int(10) DEFAULT NULL,
+  `tinInstitituteType` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`intInstCourseid`),
+  KEY `FK_CourseId_idx` (`intCourseIdSAMS`),
+  KEY `idx_institute_id` (`intInstituteId`),
+  KEY `idx_institute_code` (`instituteCodeSAMS`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+
+
+CREATE TABLE `t_sams_institute_details_tmp` (
+  `intInstituteId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `intInstituteSamsCode` int(10) unsigned DEFAULT NULL,
+  `intDistrictId` int(5) DEFAULT NULL,
+  `vchInstituteName` varchar(500) NOT NULL,
+  `vchInstituteNameO` varchar(256) CHARACTER SET utf8 DEFAULT NULL,
+  `tinInstituteType` tinyint(2) NOT NULL COMMENT '1- ITI, 2- Polytechnique, 3 - Training Center, 4 - ASTI, 5- Training Provider',
+  `intEstYear` int(5) unsigned NOT NULL,
+  `vchEmailId` varchar(128) DEFAULT NULL,
+  `vchPhoneno` varchar(16) DEFAULT NULL,
+  `vchWebsite` varchar(128) DEFAULT NULL,
+  `vchImage` varchar(128) DEFAULT NULL,
+  `vchPinCode` varchar(10) DEFAULT NULL,
+  `vchAddress` varchar(512) DEFAULT NULL,
+  `txtAddressO` text CHARACTER SET utf8,
+  `vchDescriptionE` text,
+  `vchDescriptionO` text CHARACTER SET utf8,
+  `tinPublishStatus` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `tinArcStatus` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `stmCreatedOn` datetime DEFAULT NULL,
+  `intCreatedBy` int(10) unsigned NOT NULL,
+  `dtmUpdatedOn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `intUpdatedBy` int(10) unsigned DEFAULT NULL,
+  `bitDeletedFlag` bit(1) NOT NULL DEFAULT b'0',
+  `vchPrincipalName` varchar(128) DEFAULT NULL,
+  `vchPrincipalNameO` varchar(256) CHARACTER SET utf8 DEFAULT NULL,
+  `vchInstituteAlias` varchar(128) DEFAULT NULL,
+  `vchMobileNo` varchar(16) DEFAULT NULL,
+  `tinIsPIA` tinyint(3) DEFAULT '1',
+  `fltLat` decimal(20,15) DEFAULT NULL,
+  `fltLong` decimal(20,15) DEFAULT NULL,
+  `intParentId` int(10) DEFAULT NULL COMMENT 'Parent Training Provider of training centers',
+  PRIMARY KEY (`intInstituteId`),
+  KEY `idxInstituteName` (`vchInstituteName`),
+  KEY `idxIspia` (`tinIsPIA`),
+  KEY `idxInstituteAlias` (`vchInstituteAlias`),
+  KEY `idxInstDistid` (`intDistrictId`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `t_course_temp` (
+  `intCourseId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `vchSectorId` varchar(8) NOT NULL,
+  `vchCourseNameE` varchar(128) NOT NULL,
+  `vchCourseCode` varchar(8) NOT NULL,
+  `vchQualificationId` varchar(8) NOT NULL,
+  `stmCreatedOn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `intCreatedBy` int(10) unsigned NOT NULL DEFAULT '1',
+  `dtmUpdatedOn` datetime DEFAULT NULL,
+  `bitDeletedFlag` bit(1) NOT NULL DEFAULT b'0',
+  `decDurationHr` decimal(10,1) DEFAULT NULL,
+  PRIMARY KEY (`intCourseId`),
+  KEY `idxCourseNameE` (`vchCourseNameE`),
+  KEY `fk_eligibility_idx` (`vchQualificationId`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+
+CREATE TABLE `t_institute_course_tmp` (
+  `intInstCourseid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `vchInstituteCode` varchar(16) DEFAULT NULL,
+  `intInstituteId` int(10) unsigned DEFAULT NULL,
+  `vchCourseId` varchar(16) NOT NULL,
+  `stmCreatedOn` datetime DEFAULT NULL,
+  `bitDeletedflag` bit(1) NOT NULL DEFAULT b'0',
+  `intCourseId` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`intInstCourseid`),
+  KEY `FK_CourseId_idx` (`vchCourseId`),
+  KEY `idx_institute_id` (`intInstituteId`),
+  KEY `idx_institute_code` (`vchInstituteCode`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+CREATE TABLE `t_institute_details_tmp` (
+  `intInstituteId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `vchInstituteCode` varchar(64) DEFAULT NULL,
+  `intDistrictId` int(5) DEFAULT NULL,
+  `vchInstituteName` varchar(500) NOT NULL,
+  `vchInstituteNameO` varchar(256) CHARACTER SET utf8 DEFAULT NULL,
+  `tinInstituteType` tinyint(2) NOT NULL COMMENT '1- ITI, 2- Polytechnique, 3 - Training Center, 4 - ASTI, 5- Training Provider',
+  `intEstYear` int(5) unsigned NOT NULL,
+  `vchEmailId` varchar(128) DEFAULT NULL,
+  `vchPhoneno` varchar(16) DEFAULT NULL,
+  `vchWebsite` varchar(128) DEFAULT NULL,
+  `vchImage` varchar(128) DEFAULT NULL,
+  `vchPinCode` varchar(10) DEFAULT NULL,
+  `vchAddress` varchar(512) DEFAULT NULL,
+  `txtAddressO` text CHARACTER SET utf8,
+  `vchDescriptionE` text,
+  `vchDescriptionO` text CHARACTER SET utf8,
+  `tinPublishStatus` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `tinArcStatus` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `stmCreatedOn` datetime DEFAULT NULL,
+  `intCreatedBy` int(10) unsigned NOT NULL,
+  `dtmUpdatedOn` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `intUpdatedBy` int(10) unsigned DEFAULT NULL,
+  `bitDeletedFlag` bit(1) NOT NULL DEFAULT b'0',
+  `vchPrincipalName` varchar(128) DEFAULT NULL,
+  `vchPrincipalNameO` varchar(256) CHARACTER SET utf8 DEFAULT NULL,
+  `vchInstituteAlias` varchar(128) DEFAULT NULL,
+  `vchMobileNo` varchar(16) DEFAULT NULL,
+  `tinIsPIA` tinyint(3) DEFAULT '1',
+  `fltLat` decimal(20,15) DEFAULT NULL,
+  `fltLong` decimal(20,15) DEFAULT NULL,
+  `intParentId` int(10) DEFAULT NULL COMMENT 'Parent Training Provider of training centers',
+  PRIMARY KEY (`intInstituteId`),
+  KEY `idxInstituteName` (`vchInstituteName`),
+  KEY `idxIspia` (`tinIsPIA`),
+  KEY `idxInstituteAlias` (`vchInstituteAlias`),
+  KEY `idxInstDistid` (`intDistrictId`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+
+CREATE TABLE `t_sector_tmp` (
+  `intSectorId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `vchSecotrName` varchar(128) NOT NULL,
+  `stmCreatedOn` datetime DEFAULT CURRENT_TIMESTAMP,
+  `intCreatedBy` int(10) unsigned NOT NULL,
+  `dtmUpdatedOn` timestamp NULL DEFAULT NULL,
+  `bitDeletedflag` bit(1) NOT NULL DEFAULT b'0',
+  `vchSectorCode` varchar(8) NOT NULL,
+  PRIMARY KEY (`intSectorId`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+

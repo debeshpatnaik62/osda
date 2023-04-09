@@ -1,0 +1,122 @@
+iframe {
+	width: 100%;
+	height: 320px;
+	border: 1px solid #e2e2e2;
+	border-radius: 3px
+}
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	border-style: solid;
+	border-color: #e6e6e6;
+	border-width: 1px 0 0 1px
+}
+.grid__item {
+	padding: 1em .5em;
+	border-style: solid;
+	border-color: #e6e6e6;
+	border-width: 0 1px 1px 0;
+	display: inline-flex;
+	justify-content: center;
+	flex-direction: column
+}
+.contact__officers .grid__item {
+	width: 100%;
+	margin: 0
+}
+.contact__officers .grid__item span:nth-child(1) {
+	color: #585858
+}
+.contact__officers .grid__item span:nth-child(2) {
+	font-weight: 600;
+	color: var(--osdaColor2)
+}
+.contact__officers .grid__item a {
+	color: #1773d6
+}
+.flex-item-center {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	text-align: center
+}
+.text-info {
+	color: #9c42af!important
+}
+.tabsec {
+	padding: 20px;
+	margin-top: 50px
+}
+.nav-tabs .nav-link.active, .tabsec .nav-tabs .nav-item.show .nav-link {
+	color: #fff!important;
+	background: linear-gradient(45deg, #643891 0, #a03a86 100%)!important;
+	border-color: #af469f #af469f #7b388c!important
+}
+.tabsec .nav-tabs .nav-link {
+	margin: 5px;
+	padding: 7px 25px;
+	font-size: 14px;
+	color: #963987;
+	background: #fff;
+	transition-duration: .4s;
+	font-weight: 500;
+	border-radius: 30px!important;
+	border: 1px solid #85398b
+}
+.tabsec nav {
+	margin-bottom: 20px
+}
+.nav-tabs .nav-link:hover, .tabsec .nav-tabs .nav-link:focus {
+	color: #fff!important;
+	background: linear-gradient(45deg, #643891 0, #a03a86 100%)!important;
+	border-color: #af469f #af469f #7b388c!important
+}
+.nav-tabs {
+	border-bottom: none;
+}
+h3 small {
+	color: #908f8f;
+	font-size: 17px
+}
+.mandatory {
+	position: absolute;
+	right: -5px;
+	top: 0;
+	color: red;
+	font-weight: 700
+}
+.box-shadow .form-row>.col, .form-row>[class*=col-] {
+	padding-right: 5px;
+	padding-left: 15px
+}
+
+@media screen and (min-width:530px) {
+.contact__officers .grid__item {
+	width: 50%
+}
+}
+
+@media screen and (min-width:992px) {
+.contact__officers .grid__item {
+	width: 33.33%
+}
+}
+
+@media screen and (min-width:1200px) {
+.contact__officers .grid__item {
+	width: 25%
+}
+}
+
+
+@media screen and (max-width:480px) {
+.tabsec .nav-tabs .nav-link {
+	    padding: 3px 7px;
+    font-size: 11px;
+    margin-right: 2px;
+}
+.tabsec {
+	margin-top: 0
+}
+}

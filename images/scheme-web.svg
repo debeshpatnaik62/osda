@@ -1,0 +1,120 @@
+<svg id="English" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1182" height="491" viewBox="0 0 1182 491">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9d5297;
+      }
+
+      .cls-1, .cls-2 {
+        opacity: 0.88;
+      }
+
+      .cls-2 {
+        fill: #77519e;
+      }
+
+      .cls-12, .cls-3 {
+        fill: #92278f;
+      }
+
+      .cls-11, .cls-12, .cls-14, .cls-15, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        filter: url(#filter);
+      }
+
+      .cls-4 {
+        font-size: 25px;
+      }
+
+      .cls-4, .cls-6, .cls-7 {
+        fill: #fff;
+        text-anchor: middle;
+      }
+
+      .cls-10, .cls-4, .cls-6, .cls-7 {
+        font-family: Montserrat;
+      }
+
+      .cls-4, .cls-8 {
+        font-weight: 600;
+      }
+
+      .cls-5 {
+        filter: url(#filter-2);
+      }
+
+      .cls-6 {
+        font-size: 20px;
+      }
+
+      .cls-7 {
+        font-size: 26px;
+      }
+
+      .cls-9 {
+        font-size: 17px;
+      }
+
+      .cls-10 {
+        font-size: 19px;
+        font-weight: 500;
+      }
+
+      .cls-11 {
+        fill: #0a559b;
+      }
+
+      .cls-13, .cls-14 {
+        fill: #903989;
+      }
+    </style>
+    <filter id="filter" x="59" y="383" width="1182" height="162" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="59" y="383" width="1182" height="162" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE4MiIgaGVpZ2h0PSIxNjIiIHZpZXdCb3g9IjAgMCAxMTgyIDE2MiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHkxPSI4MSIgeDI9IjExODIiIHkyPSI4MSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuMDM1IiBzdG9wLWNvbG9yPSIjYmFkZmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC45NjUiIHN0b3AtY29sb3I9IiNmZmQ5ZmYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjExODIiIGhlaWdodD0iMTYyIi8+Cjwvc3ZnPgo="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="504" y="0" width="176" height="54" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="504" y="0" width="176" height="54" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTc2IiBoZWlnaHQ9IjU0IiB2aWV3Qm94PSIwIDAgMTc2IDU0Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjExMi4zMTEiIHgyPSI2My42ODkiIHkyPSI1NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii0wLjI1IiBzdG9wLWNvbG9yPSIjOTAzOTg5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC42NSIgc3RvcC1jb2xvcj0iIzY0Mzg5MSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEuMjUiIHN0b3AtY29sb3I9IiM2NDM4OTEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjE3NiIgaGVpZ2h0PSI1NCIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-1" x="900" y="153" width="282" height="102" rx="5" ry="5"/>
+  <rect class="cls-1" x="600" y="153" width="282" height="102" rx="5" ry="5"/>
+  <rect class="cls-2" x="300" y="153" width="282" height="102" rx="5" ry="5"/>
+  <rect class="cls-2" y="153" width="282" height="102" rx="5" ry="5"/>
+  <path id="Rectangle_3_copy_5" data-name="Rectangle 3 copy 5" class="cls-3" d="M64,383H336a5,5,0,0,1,5,5V540a5,5,0,0,1-5,5H64a5,5,0,0,1-5-5V388A5,5,0,0,1,64,383Zm300,0H636a5,5,0,0,1,5,5V540a5,5,0,0,1-5,5H364a5,5,0,0,1-5-5V388A5,5,0,0,1,364,383Zm300,0H936a5,5,0,0,1,5,5V540a5,5,0,0,1-5,5H664a5,5,0,0,1-5-5V388A5,5,0,0,1,664,383Zm300,0h272a5,5,0,0,1,5,5V540a5,5,0,0,1-5,5H964a5,5,0,0,1-5-5V388A5,5,0,0,1,964,383Z" transform="translate(-59 -54)"/>
+  <text id="PMKVY_2.0" data-name="PMKVY 2.0" class="cls-4" x="740" y="213">PMKVY 2.0</text>
+  <text id="PMKK" class="cls-4" x="1040.001" y="213">PMKK</text>
+  <rect class="cls-5" x="504" width="176" height="54"/>
+  <text id="Schemes" class="cls-6" x="592" y="34">Schemes</text>
+  <text id="PLTP_Placement_Link_Training_Program_" data-name="PLTP (Placement Link Training Program)" class="cls-7" x="141" y="192"><tspan class="cls-8">PLTP</tspan><tspan class="cls-9" x="141" dy="20.4">(Placement Link Training</tspan><tspan class="cls-9" x="141" dy="20.4">Program)</tspan></text>
+  <text id="State_Sponsored_" data-name="State Sponsored " class="cls-10" x="32" y="377">State Sponsored</text>
+  <text id="Managed_by_OSDA_Dir._of_Employment" data-name="Managed by OSDA &amp; Dir. of Employment" class="cls-10" x="35" y="412">Managed by OSDA &amp;<tspan x="35" dy="22.8">Dir. of Employment</tspan></text>
+  <path class="cls-11" d="M76,421a4,4,0,1,1-4,4A4,4,0,0,1,76,421Zm0,35a4,4,0,1,1-4,4A4,4,0,0,1,76,456Z" transform="translate(-59 -54)"/>
+  <text id="Center_Sponsored_State_Managed_" data-name="Center Sponsored State Managed " class="cls-10" x="339" y="377">Center Sponsored State<tspan x="339" dy="22.8">Managed</tspan></text>
+  <text id="Managed_by_ORMAS" data-name="Managed by ORMAS" class="cls-10" x="338" y="434">Managed by ORMAS</text>
+  <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-11" d="M383,421a4,4,0,1,1-4,4A4,4,0,0,1,383,421Zm0,57a4,4,0,1,1-4,4A4,4,0,0,1,383,478Z" transform="translate(-59 -54)"/>
+  <text id="DDU-GKY" class="cls-4" x="440" y="213">DDU-GKY</text>
+  <text id="Center_Sponsored_State_Managed_2" data-name="Center Sponsored State Managed " class="cls-10" x="637" y="377">Center Sponsored State<tspan x="637" dy="22.8">Managed</tspan></text>
+  <text id="Managed_by_NSDC" data-name="Managed by NSDC" class="cls-10" x="637" y="433">Managed by NSDC</text>
+  <text id="Managed_by_NSDC-2" data-name="Managed by NSDC" class="cls-10" x="938" y="433">Managed by NSDC</text>
+  <path id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-12" d="M681,421a4,4,0,1,1-4,4A4,4,0,0,1,681,421Zm0,56a4,4,0,1,1-4,4A4,4,0,0,1,681,477Z" transform="translate(-59 -54)"/>
+  <path id="Ellipse_1_copy_3" data-name="Ellipse 1 copy 3" class="cls-12" d="M983,421a4,4,0,1,1-4,4A4,4,0,0,1,983,421Zm0,56a4,4,0,1,1-4,4A4,4,0,0,1,983,477Z" transform="translate(-59 -54)"/>
+  <text id="Center_Sponsored_State_Managed_3" data-name="Center Sponsored State Managed " class="cls-10" x="936" y="377">Center Sponsored State<tspan x="936" dy="22.8">Managed</tspan></text>
+  <rect class="cls-13" x="140" y="122" width="3" height="30"/>
+  <rect id="Rectangle_10_copy_2" data-name="Rectangle 10 copy 2" class="cls-13" x="436" y="122" width="3" height="30"/>
+  <rect id="Rectangle_10_copy_3" data-name="Rectangle 10 copy 3" class="cls-13" x="741" y="122" width="3" height="30"/>
+  <rect id="Rectangle_10_copy_6" data-name="Rectangle 10 copy 6" x="591" y="52" width="3" height="63"/>
+  <rect id="Rectangle_10_copy_4" data-name="Rectangle 10 copy 4" class="cls-13" x="1049" y="122" width="3" height="30"/>
+  <rect id="Rectangle_10_copy_5" data-name="Rectangle 10 copy 5" class="cls-13" x="140" y="255" width="3" height="68"/>
+  <rect id="Rectangle_10_copy_5-2" data-name="Rectangle 10 copy 5" class="cls-13" x="436" y="255" width="3" height="68"/>
+  <rect id="Rectangle_10_copy_5-3" data-name="Rectangle 10 copy 5" class="cls-13" x="741" y="255" width="3" height="68"/>
+  <rect id="Rectangle_10_copy_5-4" data-name="Rectangle 10 copy 5" class="cls-13" x="1049" y="255" width="3" height="68"/>
+  <path id="Rectangle_10_copy" data-name="Rectangle 10 copy" class="cls-14" d="M1111,173v3H199v-3h912Z" transform="translate(-59 -54)"/>
+  <path id="Shape_6_copy_3" data-name="Shape 6 copy 3" class="cls-12" d="M1102,368v5l8,8,8-8v-5l-8,8Zm-308,0v5l8,8,8-8v-5l-8,8Zm-306,0v5l8,8,8-8v-5l-8,8Zm-295,0v5l8,8,8-8v-5l-8,8Z" transform="translate(-59 -54)"/>
+  <path id="Shape_6_copy_4" data-name="Shape 6 copy 4" class="cls-15" d="M644,159v5l8,8,8-8v-5l-8,8Z" transform="translate(-59 -54)"/>
+</svg>

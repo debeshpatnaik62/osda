@@ -1,0 +1,77 @@
+.centre-details{border: 1px solid #e4e4e4;padding: .5em;display: table;width: 100%}
+.centre__icon{display: table-cell;vertical-align: middle;width: 45px;}
+.centre__attr{margin: 0 0 0 .5em;display: table-cell;vertical-align: middle;}
+.centre__attr span{display: block;}
+.centre__attr span:first-child{color: var(--osdaColor2)}
+.centre__attr span:last-child{font-weight: 600;font-size: 1rem;}
+.centre-img{width: 35px}
+.institute-img{min-height: 200px;border: 1px solid #dcdcdc;background-color: #fff;padding: .5em;margin: 1em 0 0 0;}
+.contact-details{margin: 0 0 1em 0;border-bottom: 1px solid #e5d4e6;padding: 0 0 1em 1em;}
+.contact-details:last-child{border: none;}
+.contact-details span{color: var(--osdaColor1)}
+.contact-details h4{position: relative;margin: .5em 0 1em 0;}
+.contact-details h4:before{position: absolute;content: "";left: 0;bottom: -9px;height: 2px;width: 20px;background-color: var(--osdaColor1)}
+.contact-details a{color: var(--dark)}
+.secondary-text{font-size: .9rem;color: #6c757d;}
+
+.storypersons .carousel-control-next, .storypersons .carousel-control-prev {font-size: 38px;bottom: 37px; width: 10%;}
+.storypersons .carousel-control-next {color: #7d7d7d;right: -90px;}
+.storypersons .carousel-control-prev {color: #7d7d7d;left: -90px;}
+
+.storypersons .multi_hover {background: rgba(0,0,0,.3);width: 100%;height: 100%;position: absolute;z-index: 9;top: 0px;left: 0px;text-align: center;padding-top: 15%;font-size: 20px;display: none;color: #fff;}
+.galleryNew {height: 82px!important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 576px){
+.contact-details,.contact-details:last-child {margin: 0;border: 1px solid #e5d4e6;padding: 1em;}
+.secondary-text{font-size: 1.1rem;}
+}
+
+
+@media screen and (min-width: 768px){
+.contact-details,.contact-details:last-child {border: none;}
+.institute-img {min-height: 400px;}
+}
+
+@media screen and (min-width: 1200px){
+.contact-details h4:before{height: 3px;}
+.contact-details h4 {margin: .5em 0 1.4em 0;}
+.institute-img {min-height: 320px;}
+
+}
+
+
+
+
+
+@media screen and (max-width: 1024px){
+.storypersons .carousel-control-next {right: -67px;}
+.storypersons .carousel-control-prev {left: -67px;}
+
+}
+
+
+
+@media screen and (max-width: 640px){
+.galleryNew {height: auto !important;}
+
+}
+
+

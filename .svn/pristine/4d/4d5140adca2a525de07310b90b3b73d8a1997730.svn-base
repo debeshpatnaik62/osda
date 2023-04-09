@@ -1,0 +1,114 @@
+.body {font-family: apuniaprant!important;font-size: 18px}
+.font-lgb.odia, .innerleft h3.odia, .innerleft.odia, .odia, h1.odia, h2.odia, h3.odia, h4.odia, h5.odia {font-family: apuniaprant, sans-serif!important}
+.nav-menu a{font-size: 18px;line-height: 23px;}
+#mobile-nav ul li a{font-size:16px;}
+.unicornsec h1 {font-size: 56px;line-height: 85px;}
+.osdaportlet .card-body h3 {font-size: 20px;}
+.comptext h3 {font-size: 35px;}
+.comptext h1 {font-size: 47px;}
+.overlay__text {font-size: 1.7em;line-height: 43px;}
+.rightsec h3 span {font-size: 22px;}
+.card-title {font-size: 23px!important;}
+.inNews__headline {font-size: 1.3rem!important;}
+
+
+
+
+
+@media screen and (max-width: 640px){
+.overlay__text {font-size: 1em;line-height: 25px;}
+.unicornsec h1 {font-size: 31px;line-height: 53px;}
+.comptext h1 {font-size: 17px;}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

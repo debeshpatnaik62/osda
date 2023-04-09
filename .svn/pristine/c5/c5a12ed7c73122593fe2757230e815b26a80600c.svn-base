@@ -1,0 +1,31 @@
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+header {
+    border-bottom: 4px solid #a13f89;
+    padding: 0 0 1.2rem 0;
+    text-align: center;
+}
+header h1 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 0rem;
+}
+header p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+table tr td strong {font-size: 1.2rem;}
+/* .photos {
+    display: flex;
+    padding: 0 .5rem;
+}
+.photos div {
+    flex: 1;
+    padding: 0.5rem;
+} */
+.photos tr td img {
+    display: block;
+    border: 3px solid #e2e2e2;
+}

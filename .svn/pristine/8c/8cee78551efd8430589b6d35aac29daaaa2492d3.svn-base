@@ -1,0 +1,16 @@
+{
+  "name": "Survey Form",
+  "short_name": "Lite Survey",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "80x80",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#7d398d",
+  "background_color": "#7d398d",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/"
+}

@@ -1,0 +1,124 @@
+Options +FollowSymlinks
+RewriteEngine On 
+RewriteCond %{REQUEST_METHOD}  ^(TRACE|OPTIONS) 
+RewriteRule .* - [F]
+
+# Application URL, Created By Yasmin Naz on 1st Aug 2016# 
+
+
+             #Header option/security options added By T KEtaki Debadarshini on 12th May 2016#
+            <ifModule mod_headers.c>
+                Header unset Access-Control-Allow-Origin
+                Header unset Access-Control-Allow-Headers
+                Header unset Access-Control-Allow-Methods
+                Header unset Access-Control-Allow-Credentials
+
+                Header add Access-Control-Allow-Origin "same-origin"
+                Header add Access-Control-Allow-Headers "origin, content-type"
+                Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE"
+                Header set Access-Control-Allow-Credentials   "true"
+                #Header always set X-Content-Type-Options nosniff
+                #Header set X-XSS-Protection "1; mode=block"
+            </IfModule>
+            #Slow HTTP Denial of Service Attack
+           # <IfModule mod_reqtimeout.c>
+            # RequestReadTimeout header=20-40,MinRate=500 body=30,MinRate=500
+            #</IfModule>
+            #To disable displaying the directory list
+            Options -Indexes
+             #Session Cookie for Secure flag set
+           # php_value session.cookie_httponly 1
+            #php_value session.use_only_cookies 1
+
+            <IfModule mod_deflate.c>
+                # Compress HTML, CSS, JavaScript, Text, XML and fonts
+                AddOutputFilterByType DEFLATE application/javascript
+                AddOutputFilterByType DEFLATE application/rss+xml
+                AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+                AddOutputFilterByType DEFLATE application/x-font
+                AddOutputFilterByType DEFLATE application/x-font-opentype
+                AddOutputFilterByType DEFLATE application/x-font-otf
+                AddOutputFilterByType DEFLATE application/x-font-truetype
+                AddOutputFilterByType DEFLATE application/x-font-ttf
+                AddOutputFilterByType DEFLATE application/x-javascript
+                AddOutputFilterByType DEFLATE application/xhtml+xml
+                AddOutputFilterByType DEFLATE application/xml
+                AddOutputFilterByType DEFLATE font/opentype
+                AddOutputFilterByType DEFLATE font/otf
+                AddOutputFilterByType DEFLATE font/ttf
+                AddOutputFilterByType DEFLATE image/svg+xml
+                AddOutputFilterByType DEFLATE image/x-icon
+                AddOutputFilterByType DEFLATE text/css
+                AddOutputFilterByType DEFLATE text/html
+                AddOutputFilterByType DEFLATE text/javascript
+                AddOutputFilterByType DEFLATE text/plain
+                AddOutputFilterByType DEFLATE text/xml
+
+                # Remove browser bugs (only needed for really old browsers)
+                BrowserMatch ^Mozilla/4 gzip-only-text/html
+                BrowserMatch ^Mozilla/4\.0[678] no-gzip
+                BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+                Header append Vary User-Agent
+              </IfModule>
+
+                    
+              
+                <IfModule mod_headers.c>
+                    Header set Connection keep-alive
+                    <filesmatch "\.(ico|flv|gif|swf|eot|woff|otf|ttf|svg)$">
+                        Header set Cache-Control "max-age=2592000, public"
+                    </filesmatch>
+                    <filesmatch "\.(jpg|jpeg|png)$">
+                        Header set Cache-Control "max-age=1209600, public"
+                    </filesmatch>
+                    <filesmatch "\.(eot|woff|otf|ttf|svg)$">
+                        Header set Cache-Control "max-age=2592000, public"
+                    </filesmatch>
+                    # css and js should use private for proxy caching https://developers.google.com/speed/docs/best-practices/caching#LeverageProxyCaching
+                    <filesmatch "\.(css)$">
+                        Header set Cache-Control "max-age=31536000, private"
+                    </filesmatch>
+                    <filesmatch "\.(js)$">
+                        Header set Cache-Control "max-age=1209600, private"
+                    </filesmatch>
+                    <filesMatch "\.(x?html?|php)$">
+                        Header set Cache-Control "max-age=600, private, must-revalidate"
+                    </filesMatch>
+                </IfModule>
+
+            <IfModule mod_gzip.c>
+                mod_gzip_on       Yes
+                mod_gzip_dechunk  Yes
+                mod_gzip_item_include file      \.(html?|txt|css|js|php|pl|jpg|png|gif)$
+                mod_gzip_item_include handler   ^cgi-script$
+                mod_gzip_item_include mime      ^text/.*
+                mod_gzip_item_include mime      ^application/x-javascript.*
+                mod_gzip_item_exclude mime      ^image/.*
+                mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+            </IfModule>
+                # only use for venue details start ::::::::::::::::: By Rahul
+                RewriteRule    ^skill-competition/([a-zA-Z0-9-]*)?$                      index.php?PG=$1 
+                # venue details End:::::::::::::::::::::::: 03 feb-2020   
+                RewriteRule    ^sitemap.xml?$				        sitemap.xml
+                RewriteRule    ^home?$						index.php
+                RewriteRule    ^Application/?$					Application/index.php		
+                RewriteRule    ^([a-zA-Z0-9-]*)?$				index.php?PG=$1
+                RewriteRule    ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]+)?$		index.php?PG=$1&NID=$2
+
+		        RewriteRule    ^([a-zA-Z0-9-]*)/([0-9]+)?$			index.php?PG=$1&ID=$2
+		        RewriteRule    ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)?$		index.php?PG=$1&GL=$2&NID=$3
+                RewriteRule    ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)?$	index.php?PG=$1&GL=$2&PL=$3&NID=$4
+
+                RewriteRule    ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-_$]+)?$		index.php?PG=$1&PARAM=$2
+                
+                RewriteRule    ^error/?$                                        view/error.php
+		        ErrorDocument 400 http://localhost:7001/OSDA/error
+                ErrorDocument 403 http://localhost:7001/OSDA/error
+                ErrorDocument 404 http://localhost:7001/OSDA/error             
+		        ErrorDocument 500 http://localhost:7001/OSDA/error             
+		
+
+		php_value upload_max_filesize 30M
+		php_value post_max_size 30M
+		php_value date.timezone Asia/Kolkata
+		

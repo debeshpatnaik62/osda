@@ -1,0 +1,39 @@
+.panel-default.faqpanel>.panel-heading {background: 0 0;border-bottom: #d9d9d9 1px solid;}
+.faq-dtl h4 {font-size: 1em;font-weight: 400;}
+#accordion .panel-heading a, #accordion .panel-heading a:hover {padding: 5px 0px;display: block;font-size: 18px;color: #777;}
+.faqpanel h4.panel-title i {float: right;padding: 0 15px 0 0;font-weight: 400;color: #9e3a86;font-size: 14px;}
+.panel-default.faqpanel>.panel-heading+.panel-collapse>.panel-body {border: 0;border-left: #9e3a87 5px solid;background: #f8f8f8;border-bottom: #efefef 1px solid;border-right: #efefef 1px solid;}
+.panel-body p{margin: 0px;padding: 13px;}
+.font-lgb {font-size: 1.2em!important;line-height: 32px!important;color: #585858;margin-bottom: 30px;}
+a {color: #923a89;}
+.panel-body ul li {padding-left: 14px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media*/
+@media screen and (max-width: 769px){	
+}

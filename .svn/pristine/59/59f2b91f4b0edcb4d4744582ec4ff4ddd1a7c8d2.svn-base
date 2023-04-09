@@ -1,0 +1,45 @@
+.year__report{position: relative;margin: 0 0 1em 0;border: 2px solid #66166b;min-height: 200px;background-color: #a0a0a0;}
+.report__media{width: 100%}
+.report__details{position: absolute;top: 0;right: 0;bottom: 0;left: 0;background: linear-gradient(to top, rgb(0, 0, 0) , rgba(0, 0, 0, 0) 75%);}
+.report__content{position: absolute;bottom: 0;width: 100%;padding: 1em;}
+.report__content h3{color: #fff;margin: .1em 0 .7em 0;}
+.report__content span{color: #ff5aec;font-size: 1rem;}
+.report__content a{color: #fff;border: 1px solid;padding: .3em 1em;border-radius: 1px;font-size: .9rem;}
+.report__content a:hover{background-color: #333;border-color: #acacac}
+
+/*Media*/
+@media screen and (min-width: 430px){
+
+
+}
+
+@media screen and (min-width: 630px){
+.year__report {
+    margin: .5em;
+    width: calc(50% - 18px);
+    display: inline-block;
+}
+.report__content h3 {
+    font-size: 1.5rem;
+}
+
+}
+
+@media screen and (min-width: 768px){
+.report__content h3 {
+    font-size: 1.7rem;
+}
+.report__content span {
+    font-size: 1.2rem;
+}
+
+}
+
+@media screen and (min-width: 1024px){
+.year__report {
+    width: calc(33% - 16px);
+    min-height: 205px;
+}
+
+
+}

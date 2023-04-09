@@ -1,0 +1,19 @@
+.social__icons{margin: 1em 0;text-align: center;}
+.social__icons a{padding: .4em 0;font-size: 1rem;margin: 0 .2em;width: 40px;display: inline-block;text-align: center;border-radius: 2px}
+.social__icons a:hover{color: #fff}
+.social__widget{
+    /* border: 1px solid #dadada; */
+    border-radius: 3px;
+}
+
+.powered-by {
+    display: none !important;
+}
+
+
+
+/*Media*/
+@media screen and (min-width: 630px){
+.social__icons a {width: calc(8% - 0px);font-size: 1.5rem;padding: .5em 0;}
+
+}

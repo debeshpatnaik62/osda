@@ -1,0 +1,42 @@
+.worldimg {
+	height: 560px;
+	background: #eaeaea;
+	border-radius: 15px
+}
+.worldimg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+.slide-progress {
+	width: 0;
+	max-width: 100%;
+	height: 5px;
+	background: var(--warning);
+	position: absolute;
+	top: 0;
+	left: 1px;
+	right: 0;
+	z-index: 2
+}
+.text-secondary {
+	color: #6c757d!important;
+	margin: 0;
+	font-size: 18px;
+	font-weight: 500
+}
+.text-secondary img {
+	width: 22px;
+	padding-left: 5px
+}
+@media screen and (max-width:1024px) {
+.worldimg {
+	height: 470px
+}
+}
+
+@media screen and (max-width:640px) {
+.worldimg {
+	height: 200px
+}
+}

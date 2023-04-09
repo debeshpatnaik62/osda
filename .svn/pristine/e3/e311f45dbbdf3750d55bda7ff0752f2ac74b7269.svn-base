@@ -1,0 +1,122 @@
+CREATE  TRIGGER `t_course_sams_temp_AFTER_INSERT` AFTER INSERT ON `t_course_sams_temp` FOR EACH ROW
+BEGIN
+SET SQL_SAFE_UPDATES = 0;
+
+SELECT intOSDACourseId into @ID FROM t_course_tagged WHERE 
+(CASE WHEN NEW.intInstituteType='11' THEN intSAMSITICourseId WHEN NEW.intInstituteType='12' THEN intSAMSPOLCourseId END)=NEW.intSamsCourseId AND bitDeletedFlag=0;
+
+  IF(@ID>0)
+  THEN
+UPDATE t_course_details ts SET ts.intDuration =NEW.intDuration ,dtmUpdatedOn=NOW(),ts.intUpdatedBy=111 WHERE ts.intCourseId =@ID  AND ts.bitDeletedFlag=0; 
+SET @ID=0;
+
+ELSE 
+IF((SELECT count(*) FROM t_course_details WHERE intSamsTagFlag=1 and bitDeletedFlag=0)>0)THEN
+ INSERT INTO t_course_details(intCategoryId,vchCourseNameE, intCourseType,vchCourseAlias, intDuration,decDurationHr, vchDescriptionE, vchDescriptionO, intEligibility,stmCreatedOn, intCreatedBy,vchCourseMapId,tinPublishStatus)VALUES (0,NEW.vchCourseNameE,0,lower(replace(NEW.vchCourseNameE,' ','-')),NEW.intDuration,0.0 ,'','',NEW.vchQualificationId,NOW(),111,'',2);
+END IF;
+END IF;
+END
+
+
+
+
+CREATE TRIGGER `t_sams_institute_course_tmp_BEFORE_INSERT` BEFORE INSERT ON `t_sams_institute_course_tmp` FOR EACH ROW
+BEGIN
+SET NEW.intInstituteId  =(select ti.intInstituteId  from t_institute_details ti  where ti.vchInsMapCode=NEW.instituteCodeSAMS and ti.bitDeletedflag=0);
+   SET  NEW.intCourseId =(select tc.intOSDACourseId from t_course_tagged tc where 
+   (CASE WHEN NEW.tinInstitituteType =1 THEN tc.intSAMSITICourseId 
+   WHEN NEW.tinInstitituteType =2 THEN tc.intSAMSPOLCourseId END)=NEW.intCourseIdSAMS and tc.bitDeletedFlag=0);
+END
+
+
+
+CREATE  TRIGGER `t_sams_institute_details_tmp_AFTER_INSERT` AFTER INSERT ON `t_sams_institute_details_tmp` FOR EACH ROW
+BEGIN
+SET SQL_SAFE_UPDATES = 0;
+/* For training institute data update*/
+ IF ((SELECT count(*) FROM t_institute_details WHERE vchInsMapCode=NEW.intInstituteSamsCode and tinIsPIA IN(1,2)) >0)
+ THEN
+UPDATE t_institute_details ts SET ts.vchInstituteName = NEW.vchInstituteName,ts.tinInstituteType =NEW.tinInstituteType,
+ts.vchEmailId =CASE WHEN(NEW.vchEmailId !='' and NEW.vchEmailId IS NOT NULL) THEN NEW.vchEmailId END,
+ts.vchPhoneno= CASE WHEN (NEW.vchPhoneno !='' and NEW.vchPhoneno IS NOT NULL)THEN
+NEW.vchPhoneno END,ts.vchAddress=NEW.vchAddress,ts.dtmUpdatedOn=NOW(),ts.intUpdatedBy=111,ts.vchMobileNo=NEW.vchMobileNo WHERE ts.vchInsMapCode = NEW.intInstituteSamsCode AND ts.bitDeletedFlag=0; 
+#INSERT INTO `t_test` ( `intflag`, `bitDeletedFlag`) VALUES ('99', 0);
+ELSE 
+IF((SELECT count(*) FROM t_institute_details WHERE (coalesce(vchInsMapCode,0))!=0 and tinIsPIA IN(1,2))>0)THEN
+#INSERT INTO `t_test` ( `intflag`, `bitDeletedFlag`) VALUES ('100', 0);
+#IF(1=1)THEN
+  INSERT INTO t_institute_details(intDistrictId, vchInstituteName, vchInstituteNameO, tinInstituteType, intEstYear, vchEmailId, vchPhoneno, vchWebsite, vchImage, vchAddress,txtAddressO,vchDescriptionE, vchDescriptionO,vchPrincipalName,vchPrincipalNameO,stmCreatedOn, intCreatedBy,vchInstituteAlias,vchMobileNo,tinIsPIA,vchPinCode,fltLat,fltLong,intParentId,vchInsMapCode,tinPublishStatus)VALUES (NEW.intDistrictId,NEW.vchInstituteName,NEW.vchInstituteNameO,NEW.tinInstituteType,0,NEW.vchEmailId,NEW.vchPhoneno,'','',NEW.vchAddress,NEW.vchAddress,'','','','',NOW(),111,
+  lower(replace_spaceWithHyphen(NEW.vchInstituteName)),NEW.vchPhoneno,NEW.tinIsPIA,'',0.0,0.0,0,NEW.intInstituteSamsCode,2);
+ 
+ END IF;
+END IF;
+END
+
+
+
+CREATE  TRIGGER `t_course_temp_AFTER_INSERT` AFTER INSERT ON `t_course_temp` FOR EACH ROW
+BEGIN
+SET SQL_SAFE_UPDATES = 0;
+  IF (SELECT count(*) FROM t_course_details WHERE vchCourseMapId=NEW.vchCourseCode) >0
+        THEN
+UPDATE t_course_details ts SET ts.vchCourseNameE = NEW.vchCourseNameE,ts.vchCourseAlias =lower(replace(NEW.vchCourseNameE,' ','-')),
+ts.decDurationHr =NEW.decDurationHr ,ts.intCategoryId=(select intSectorId from t_sector where vchSectormapCOde=NEW.vchSectorId),dtmUpdatedOn=NOW(),ts.intUpdatedBy=999 WHERE ts.vchCourseMapId = NEW.vchCourseCode AND ts.bitDeletedFlag=0; 
+ELSE 
+IF((SELECT count(*) FROM t_course_details WHERE vchCourseMapId IS NULL)=0)THEN
+ INSERT INTO t_course_details(intCategoryId,vchCourseNameE, intCourseType,vchCourseAlias, intDuration,decDurationHr, vchDescriptionE, vchDescriptionO, intEligibility,stmCreatedOn, intCreatedBy,vchCourseMapId)VALUES ((select intSectorId from t_sector where vchSectormapCOde=NEW.vchSectorId),NEW.vchCourseNameE,0,lower(replace(NEW.vchCourseNameE,' ','-')),0.0,NEW.decDurationHr ,'','',0,NOW(),999,NEW.vchCourseCode);
+ END IF;
+ 
+END IF;
+
+
+END
+
+
+
+
+CREATE  TRIGGER `t_institute_course_tmp_BEFORE_INSERT` BEFORE INSERT ON `t_institute_course_tmp` FOR EACH ROW
+BEGIN
+    SET NEW.intInstituteId  =(select ti.intInstituteId  from t_institute_details ti  where ti.vchInsMapCode=NEW.vchInstituteCode and ti.bitDeletedFlag=0);
+   SET  NEW.intCourseId =(select tc.intCourseId from t_course_details tc where tc.vchCourseMapId=NEW.vchCourseId and tc.bitDeletedFlag=0);
+
+END
+
+
+CREATE  TRIGGER `t_institute_details_tmp_AFTER_INSERT` AFTER INSERT ON `t_institute_details_tmp` FOR EACH ROW
+BEGIN
+SET SQL_SAFE_UPDATES = 0;
+/* For training center data update*/
+ IF ((SELECT count(*) FROM t_institute_details WHERE vchInsMapCode=NEW.vchInstituteCode and tinIsPIA=3) >0)
+ THEN
+UPDATE t_institute_details ts SET ts.vchInstituteName = NEW.vchInstituteName,ts.tinInstituteType =NEW.tinInstituteType,
+ts.vchEmailId =CASE WHEN(NEW.vchEmailId !='' and NEW.vchEmailId IS NOT NULL) THEN NEW.vchEmailId END,
+ts.vchPhoneno= CASE WHEN (NEW.vchPhoneno !='' and NEW.vchPhoneno IS NOT NULL)THEN
+NEW.vchPhoneno
+END
+,ts.vchAddress=NEW.vchAddress,ts.dtmUpdatedOn=NOW(),ts.intUpdatedBy=999,ts.vchMobileNo=NEW.vchMobileNo WHERE ts.vchInsMapCode = NEW.vchInstituteCode AND ts.bitDeletedFlag=0; 
+ELSE 
+IF((SELECT count(*) FROM t_institute_details WHERE (coalesce(vchInsMapCode,0))!=0 and tinIsPIA=3)=0)THEN
+#IF(1=1)THEN
+  INSERT INTO t_institute_details(intDistrictId, vchInstituteName, vchInstituteNameO, tinInstituteType, intEstYear, vchEmailId, vchPhoneno, vchWebsite, vchImage, vchAddress,txtAddressO,vchDescriptionE, vchDescriptionO,vchPrincipalName,vchPrincipalNameO,stmCreatedOn, intCreatedBy,vchInstituteAlias,vchMobileNo,tinIsPIA,vchPinCode,fltLat,fltLong,intParentId,vchInsMapCode)VALUES (NEW.intDistrictId,NEW.vchInstituteName,NEW.vchInstituteName,NEW.tinInstituteType,0,NEW.vchEmailId,NEW.vchPhoneno,'','',NEW.vchAddress,NEW.vchAddress,'','','','',NOW(),999,'',NEW.vchPhoneno,3,'',0.0,0.0,0,NEW.vchInstituteCode);
+ 
+ END IF;
+END IF;
+
+END
+
+
+CREATE TRIGGER `t_sector_tmp_AFTER_INSERT` AFTER INSERT ON `t_sector_tmp` FOR EACH ROW
+BEGIN
+
+SET SQL_SAFE_UPDATES = 0;
+  IF ((SELECT count(*) FROM t_sector WHERE vchSectormapCOde=NEW.vchSectorCode and bitDeletedflag=0) >0)
+        THEN
+UPDATE t_sector ts SET ts.vchSecotrName = NEW.vchSecotrName,ts.intCreatedBy =1 ,ts.vchSecotrAlias=lower(replace(NEW.vchSecotrName,' ','-')),ts.dtmUpdatedOn=NOW(),ts.intUpdatedBy=999,tinPublishStatus=2   WHERE ts.vchSectormapCOde = NEW.vchSectorCode AND ts.bitDeletedflag=0; 
+ELSE 
+		IF((SELECT count(*) FROM t_sector WHERE vchSectormapCOde IS NULL and bitDeletedflag=0)=0)THEN
+		INSERT INTO t_sector(vchSecotrName, vchSecotrNameO,vchSecotrAlias,vchImage, vchDescription, vchDescriptionO, intCreatedBy,tinPublishStatus,vchSectormapCOde) VALUES (NEW.vchSecotrName,NEW.vchSecotrName,lower(replace(NEW.vchSecotrName,' ','-')),'','','',999,2,NEW.vchSectorCode);
+      END IF;
+ 
+END IF;
+
+END

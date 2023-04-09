@@ -1,0 +1,118 @@
+<svg id="English" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="331.25" height="656.438" viewBox="0 0 331.25 656.438">
+  <defs>
+    <style>
+      .cls-1, .cls-11, .cls-8, .cls-9 {
+        fill: #903989;
+      }
+
+      .cls-1, .cls-12, .cls-7, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #643891;
+      }
+
+      .cls-2, .cls-8 {
+        opacity: 0.88;
+      }
+
+      .cls-3 {
+        font-size: 25.708px;
+      }
+
+      .cls-10, .cls-14, .cls-3, .cls-4, .cls-5 {
+        fill: #fff;
+        text-anchor: middle;
+      }
+
+      .cls-10, .cls-14, .cls-3, .cls-4, .cls-5, .cls-6 {
+        font-family: Montserrat;
+      }
+
+      .cls-10, .cls-3, .cls-5 {
+        font-weight: 600;
+      }
+
+      .cls-4 {
+        font-size: 14.282px;
+      }
+
+      .cls-5 {
+        font-size: 29.206px;
+      }
+
+      .cls-6 {
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .cls-7 {
+        fill: #0a559b;
+      }
+
+      .cls-10 {
+        font-size: 18px;
+      }
+
+      .cls-12 {
+        fill: #92278f;
+      }
+
+      .cls-13 {
+        filter: url(#filter-2);
+      }
+
+      .cls-14 {
+        font-size: 20px;
+      }
+    </style>
+    <filter id="filter" x="135" y="2" width="196.25" height="656" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="135" y="2" width="196.25" height="656" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTk2LjI1IiBoZWlnaHQ9IjY1NiIgdmlld0JveD0iMCAwIDE5Ni4yNSA2NTYiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iOTguMTI1IiB4Mj0iOTguMTI1IiB5Mj0iNjU2IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMC4wMzUiIHN0b3AtY29sb3I9IiNiYWRmZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjk2NSIgc3RvcC1jb2xvcj0iI2ZmZDlmZiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTk2LjI1IiBoZWlnaHQ9IjY1NiIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="0" y="253.438" width="116" height="64" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="0" y="253.4375" width="116" height="64" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE2IiBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgMTE2IDY0Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9Ijg2LjgxMyIgeDI9IjI5LjE4NyIgeTI9IjY0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iLTAuMjUiIHN0b3AtY29sb3I9IiM5MDM5ODkiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjY1IiBzdG9wLWNvbG9yPSIjNjQzODkxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS4yNSIgc3RvcC1jb2xvcj0iIzY0Mzg5MSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTE2IiBoZWlnaHQ9IjY0Ii8+Cjwvc3ZnPgo="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Rectangle_3_copy_7" data-name="Rectangle 3 copy 7" class="cls-1" d="M140,2H326.25a5,5,0,0,1,5,5V155a5,5,0,0,1-5,5H140a5,5,0,0,1-5-5V7A5,5,0,0,1,140,2Zm0,178H326.25a5,5,0,0,1,5,5V313a5,5,0,0,1-5,5H140a5,5,0,0,1-5-5V185A5,5,0,0,1,140,180Zm0,175H326.25a5,5,0,0,1,5,5V495a5,5,0,0,1-5,5H140a5,5,0,0,1-5-5V360A5,5,0,0,1,140,355Zm0,164H326.25a5,5,0,0,1,5,5V653a5,5,0,0,1-5,5H140a5,5,0,0,1-5-5V524A5,5,0,0,1,140,519Z" transform="translate(0 -1.563)"/>
+  <rect class="cls-2" x="134.563" width="195.812" height="57.875" rx="5" ry="5"/>
+  <rect id="Rectangle_3_copy" data-name="Rectangle 3 copy" class="cls-2" x="134.563" y="178" width="195.812" height="37.875" rx="5" ry="5"/>
+  <text id="PLTP" class="cls-3" transform="translate(232.333 24.991) scale(0.7)">PLTP</text>
+  <text id="_Placement_Link_Training_Program_" data-name="(Placement Link Training Program)" class="cls-4" transform="translate(232.333 41.991) scale(0.7)">(Placement Link Training Program)</text>
+  <text id="DDU-GKY" class="cls-5" transform="translate(231.745 202.985) scale(0.616)">DDU-GKY</text>
+  <text id="State_Sponsored_" data-name="State Sponsored " class="cls-6" x="163" y="85.437">State Sponsored</text>
+  <text id="Managed_by_OSDA_Dir._of_Employment" data-name="Managed by OSDA &amp; Dir. of Employment" class="cls-6" x="163" y="118.437">Managed by OSDA &amp;<tspan x="163" dy="18">Dir. of Employment</tspan></text>
+  <path class="cls-7" d="M148,77a4,4,0,1,1-4,4A4,4,0,0,1,148,77Zm0,35a4,4,0,1,1-4,4A4,4,0,0,1,148,112Z" transform="translate(0 -1.563)"/>
+  <text id="Center_Sponsored_State_Managed" data-name="Center Sponsored State Managed" class="cls-6" x="164" y="241.438">Center Sponsored<tspan x="164" dy="18">State Managed</tspan></text>
+  <text id="Managed_by_ORMAS" data-name="Managed by ORMAS" class="cls-6" x="164" y="294.437">Managed by ORMAS</text>
+  <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-7" d="M149,233a4,4,0,1,1-4,4A4,4,0,0,1,149,233Zm0,54a4,4,0,1,1-4,4A4,4,0,0,1,149,287Z" transform="translate(0 -1.563)"/>
+  <rect id="Rectangle_3_copy_2" data-name="Rectangle 3 copy 2" class="cls-8" x="134.563" y="518" width="195.812" height="37.875" rx="5" ry="5"/>
+  <rect id="Rectangle_3_copy_3" data-name="Rectangle 3 copy 3" class="cls-8" x="134.563" y="353" width="195.812" height="37.875" rx="5" ry="5"/>
+  <text id="Center_Sponsored_State_Managed-2" data-name="Center Sponsored State Managed" class="cls-6" x="162" y="424.438">Center Sponsored<tspan x="162" dy="18">State Managed</tspan></text>
+  <text id="Managed_by_NSDC" data-name="Managed by NSDC" class="cls-6" x="162" y="475.438">Managed by NSDC</text>
+  <text id="Center_Sponsored_State_Managed-3" data-name="Center Sponsored State Managed" class="cls-6" x="159" y="580.188">Center Sponsored<tspan x="159" dy="18">State Managed</tspan></text>
+  <text id="Managed_by_NSDC-2" data-name="Managed by NSDC" class="cls-6" x="160.977" y="633.217">Managed by NSDC</text>
+  <path id="Ellipse_1_copy_3" data-name="Ellipse 1 copy 3" class="cls-9" d="M148,417a4,4,0,1,1-4,4A4,4,0,0,1,148,417Zm0,52a4,4,0,1,1-4,4A4,4,0,0,1,148,469Z" transform="translate(0 -1.563)"/>
+  <path id="Ellipse_1_copy_3-2" data-name="Ellipse 1 copy 3" class="cls-9" d="M149,573a4,4,0,1,1-4,4A4,4,0,0,1,149,573Zm0,53a4,4,0,1,1-4,4A4,4,0,0,1,149,626Z" transform="translate(0 -1.563)"/>
+  <text id="PMKVY_2.0" data-name="PMKVY 2.0" class="cls-10" x="232" y="378.437">PMKVY 2.0</text>
+  <text id="PMKK" class="cls-10" x="231" y="544.437">PMKK</text>
+  <rect id="Rectangle_10_copy_5" data-name="Rectangle 10 copy 5" class="cls-11" x="52" y="368.438" width="68" height="3"/>
+  <rect id="Rectangle_10_copy_6" data-name="Rectangle 10 copy 6" class="cls-11" x="49" y="26.438" width="3" height="511"/>
+  <path id="Shape_6_copy_3" data-name="Shape 6 copy 3" class="cls-12" d="M111,380h5l8-8-8-8h-5l8,8Z" transform="translate(0 -1.563)"/>
+  <rect id="Rectangle_10_copy_7" data-name="Rectangle 10 copy 7" class="cls-11" x="52" y="534.438" width="68" height="3"/>
+  <path id="Shape_6_copy_4" data-name="Shape 6 copy 4" class="cls-12" d="M111,546h5l8-8-8-8h-5l8,8Z" transform="translate(0 -1.563)"/>
+  <rect id="Rectangle_10_copy_8" data-name="Rectangle 10 copy 8" class="cls-11" x="52" y="194.438" width="68" height="3"/>
+  <path id="Shape_6_copy_5" data-name="Shape 6 copy 5" class="cls-12" d="M111,206h5l8-8-8-8h-5l8,8Z" transform="translate(0 -1.563)"/>
+  <rect id="Rectangle_10_copy_9" data-name="Rectangle 10 copy 9" class="cls-11" x="52" y="26.438" width="68" height="3"/>
+  <path id="Shape_6_copy_6" data-name="Shape 6 copy 6" class="cls-12" d="M111,37h5l8-8-8-8h-5l8,8Z" transform="translate(0 -1.563)"/>
+  <rect class="cls-13" y="253.438" width="116" height="64"/>
+  <text id="Schemes" class="cls-14" x="58" y="292.438">Schemes</text>
+</svg>

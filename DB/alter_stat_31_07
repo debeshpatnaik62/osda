@@ -1,0 +1,3 @@
+ALTER TABLE `t_reports` 
+CHANGE COLUMN `vchReportHeadline` `vchReportHeadline` VARCHAR(256) NULL DEFAULT NULL ,
+ADD COLUMN `vchReportHeadlineO` VARCHAR(256) NULL DEFAULT NULL AFTER `vchReportHeadline`;

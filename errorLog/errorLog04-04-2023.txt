@@ -1,0 +1,27 @@
+
+Error Occured On :04-04-2023 14:55:17 
+==============================================
+
+Error Message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''','','',0,0,@OUT)' at line 1 
+Class: Model, Function: executeQry,Line: 295, File: C:\xampp\htdocs\OSDA\Application\controller\controller.php 
+IP: ::1 
+Error Block: Database Query Error 
+
+
+Error Occured On :04-04-2023 14:55:17 
+==============================================
+
+Error Message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''','',0,0,@OUT)' at line 1 
+Class: Model, Function: executeQry,Line: 439, File: C:\xampp\htdocs\OSDA\Application\controller\controller.php 
+IP: ::1 
+Error Block: Database Query Error 
+
+
+Error Occured On :04-04-2023 17:56:32 
+==============================================
+
+Error Message: MySQL server has gone away 
+Class: Model, Function: executeQry,Line: 32, File: C:\xampp\htdocs\OSDA\Application\controller\clsLinks.php 
+IP: ::1 
+Error Block: Database Query Error 
+

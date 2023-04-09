@@ -1,0 +1,5 @@
+.box-shadow{box-shadow: 0px 0px 7px #a9a9a9;}
+.read-more{position: relative;display: inline-block;color: #a9a9a9;}
+.read-more:after{content: "\f054";position: absolute;right: -8px;top: 10px;font-family: fontawesome;opacity: 0}
+.read-more:hover:after{opacity: 1;transition: .5s;right: -18px;color: var(--osdaColor2)}
+.read-more:hover{color: var(--osdaColor2)}

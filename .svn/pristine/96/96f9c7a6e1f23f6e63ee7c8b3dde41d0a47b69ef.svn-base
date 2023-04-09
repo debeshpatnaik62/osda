@@ -1,0 +1,69 @@
+/*
+Website Name : Odisha Skill Developement Authority (OSDA)
+Date Created : 3rd Dec 2018
+Author : MRD
+
+=============
+Contents =====
+=============
+Fonts
+Heading
+List (UL & OL)
+Image
+Paragraph
+Blockquote
+
+
+*/
+
+/*Headings*/
+h2,h3,h4,h5{font-family: 'Open Sans Condensed', sans-serif;font-weight: bold;margin: .4em 0 .3em 0 !important;line-height: 1.25 !important;position: relative;}
+h2{font-size: 2.5rem !important}
+h3{font-size: 2rem !important}
+h4{font-size: 1.5rem !important}
+h5{font-size: 1.2rem !important}
+h2.osda--heading,h3.osda--heading,h4.osda--heading,h5.osda--heading{background: linear-gradient(45deg, #512380 0%,#d047ad 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+
+/*List (ul & ol)*/
+ul{padding: 0;list-style-type: none;}
+ol{padding-left: 1.8em;position: relative;}
+ul li{line-height: 1.7;margin: 0 0 .6em 0}
+ul.list-type-arrow li{position: relative;padding: 0 0 0 1.8em}
+ul.list-type-arrow li:before{position: absolute;content: "";left: 0;top: 5px;width: 12px;height: 12px;border: 4px solid; border-color: #512380 #d047ad transparent transparent;transform: rotate(45deg);}
+
+ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: items;
+  position: relative;
+  padding: 0 0 .7em .6rem;
+}
+ol li::before {
+  content: counter(items);
+  color: #ffffff;
+  font-size: .8rem;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 2px;
+  left: -22px;
+  background: #643891;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
+}
+
+/*Images*/
+.img-left,.img-right{border: 1px solid #333;border-radius: 2px}
+.img-left{float: left;margin: .5em 1em .5em 0}
+.img-right{float: right;margin: .5em 0 .5em 1em}
+
+/*Paragraph*/
+p{font-size: 1rem;margin: 0 0 .5rem 0}
+
+/*Blockquote*/
+blockquote{position: relative;padding: 0 0 0 1em}
+blockquote::first-letter {font-size: 1.5rem;color: #8A2BE2;margin-right: .1em}
+blockquote.blockquote--bordered{border: 2px solid #643792;padding: 1em;}
+blockquote.blockquote--bordered:after{content: "";position: absolute;left: 0;top: 0;border: 10px solid;border-color: #643792 transparent transparent #643792;}
+blockquote.blockquote--border--left{border: 1px solid rgba(144, 57, 138, 0.23);padding: 1em;}
+blockquote.blockquote--border--left:before{content: "";position: absolute;left: 0;top: 0;bottom: 0;width: 4px;background: linear-gradient(45deg, #512380 0%,#d047ad 100%);}

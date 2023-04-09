@@ -1,0 +1,9 @@
+.radio-lg,.check-lg{height: 15px;width: 15px}
+.page--banner img {width: 100%;min-height: 200px;border-radius: 15px;border: 1px solid #dedede;}
+.chosen-container-multi .chosen-choices {padding: .375rem .75rem !important;font-size: 1rem;color: #495057;border: 1px solid #ced4da !important;border-radius: .25rem;background-image: none !important;}
+@media screen and (min-width: 768px){
+}
+@media screen and (min-width: 1024px){
+}
+@media screen and (min-width: 1200px){
+}

@@ -1,0 +1,33 @@
+ALTER TABLE `t_sector` 
+ADD COLUMN `vchSectormapCOde` VARCHAR(16) NULL DEFAULT AFTER `intShowHome`;
+
+
+ALTER TABLE `t_course_details` 
+ADD COLUMN `vchSectormapCOde` VARCHAR(16) NULL DEFAULT AFTER `decDurationHr`;
+
+
+ALTER TABLE `t_institute_details` 
+ADD COLUMN `vchInsMapCode` VARCHAR(64) NULL DEFAULT AFTER `intParentId`;
+
+ALTER TABLE `t_course_details` 
+ADD COLUMN `intSamsTagFlag` TINYINT(2) NULL DEFAULT 0 AFTER `vchCourseMapId`,
+ADD COLUMN `intNicTagFlag` TINYINT(2) NULL DEFAULT 0 AFTER `intSamsTagFlag`;
+
+
+
+
+ALTER TABLE `t_sams_institute_course_tmp` 
+ADD COLUMN `intBatchStrength` INT(10) NULL DEFAULT 0 AFTER `intCourseId`,
+ADD COLUMN `intBatchShiftNo` INT(10) NULL AFTER `intBatchStrength`;
+
+
+ALTER TABLE `t_sams_institute_course_tmp` 
+ADD COLUMN `tinInstitituteType` TINYINT(1) NULL AFTER `intBatchShiftNo`;
+
+
+ALTER TABLE `t_institute_details` 
+CHANGE COLUMN `vchInsMapCode` `vchInsMapCode` VARCHAR(64) NULL DEFAULT 0 ;
+
+
+
+

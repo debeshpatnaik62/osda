@@ -1,0 +1,26 @@
+Options +FollowSymlinks
+RewriteEngine On 
+RewriteCond %{REQUEST_METHOD} ^TRACE 
+RewriteRule .* - [F]
+
+# Application URL, Created By Rasmi Ranjan Swain on 25th Apr 2016# 
+	RewriteRule    ^home?$							index.php
+        RewriteRule    ^sessionExpire?$						index.php
+	RewriteRule    ^([a-zA-Z0-9-]*)?$					index.php?PAGE=$1
+        RewriteRule    ^([a-zA-Z0-9-]*)/([0-9]+)?$			index.php?PAGE=$1&ID=$2
+        RewriteRule    ^([a-zA-Z0-9-]*)/([0-9]+)/([0-9]+)?$	index.php?PAGE=$1&GL=$2&PL=$3
+        RewriteRule    ^([a-zA-Z0-9-]*)/([0-9]+)/([0-9]+)/([0-9]+)?$                                                                   index.php?PAGE=$1&GL=$2&PL=$3&ID=$4       
+        RewriteRule    ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)?$                                                   index.php?PAGE=$1&GL=$2&PL=$3&ID=$4&RC=$5
+        RewriteRule    ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)?$                                   index.php?PAGE=$1&GL=$2&PL=$3&ID=$4&RC=$5&PG=$6
+        RewriteRule    ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-\s]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)?$   index.php?PAGE=$1&GL=$2&PL=$3&ID=$4&RC=$5&PG=$6&ROWID=$7&PGCOUNT=$8
+       
+        RewriteRule    ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-_$]+)?$		index.php?PAGE=$1&PARAM=$2
+
+        RewriteRule    ^error/?$                                 view/error.php
+	ErrorDocument  400 http://localhost:7001/OSDA/Application/error
+        ErrorDocument  403 http://localhost:7001/OSDA/Application/error
+        ErrorDocument  404 http://localhost:7001/OSDA/Application/error             
+        ErrorDocument  500 http://localhost:7001/OSDA/Application/error
+
+        php_value upload_max_filesize 30M
+        php_value post_max_size 30M
